@@ -1,0 +1,2 @@
+class TrackedMealsController < ApplicationController
+end

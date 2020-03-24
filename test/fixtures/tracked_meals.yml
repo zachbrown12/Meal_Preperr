@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  available_meal_id: 1
+  date: 2020-03-24 09:58:33
+
+two:
+  available_meal_id: 1
+  date: 2020-03-24 09:58:33
