@@ -1,0 +1,19 @@
+<%= form_for @available_meal do |f| %>
+	<ul>
+		<% if @available_meal.errors.any? %>
+			<%= @available_meal.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		<% end %>
+	</ul>
+
+    <p>User</p>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+
+<p>Recipes Available</p>
+		<%= f.collection_check_boxes :recipe_id, Recipe.all, :id, :name %>
+<br> 
+<br>
+	<%= f.submit "Save my Meals" %>
+<% end %>
+
