@@ -1,25 +1,26 @@
 class SessionsController < ApplicationController
+    skip_before_action :logged_in, only: [:new, :create]
+    
+    def new
 
-skip_before_action :authenticate_user, only: [:new, :create]
+    end
 
-def new
-end
 
-def create
-  @user = User.find_by(username: params[:username])
-  if @user && @user.authenticate(params[:password])
-    session[:user_id] = @user.id
-    session[:username] = @user.name
-    redirect_to user_tracked_meals_path(@user)
-  else
-    flash[:message] = 'Incorrect Login'
-    redirect_to login_path
-  end
-end
+    def create 
+        user = User.find_by(username: params[:session][:username])
+        if user.authenticate(params[:session][:password])
+            session[:user_id]= user.id
+            redirect_to user_path(user)
+        else
+            render :new
+        end
 
-def destroy
-  session[:user_id] = nil
-  redirect_to login_path
-end
+
+    end
+
+    def destroy
+        session[:user_id]= nil
+        redirect_to new_login_path
+    end
 
 end

@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Recipe.destroy_all
+Ingredient.destroy_all
+RecipeDetail.destroy_all
 
 r1 = Recipe.create(name:"Mac and Cheese", cuisine:"American", meal_type: "Lunch", health_rating: 1, instructions:"1. Boil Water. 2. Put pasta in. 3. Take out and put cheese on the pasta.") 
 r2 = Recipe.create(name:"Cereal", cuisine:"American", meal_type: "Breakfast", health_rating: 3, instructions:"1. Combine Milk and Cereal") 
