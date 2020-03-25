@@ -1,0 +1,7 @@
+<p><%= link_to "Add Recipes to my Account", user_available_meal_path(User.find_by(username: session[:username]) %> </p>
+
+<p>Generate Meals</p>
+<%= form_for @tracked_meal, url: tracked_meal_users_path do |f| %>
+  <%=f.label_tag :start_time, "Starting Date" %>
+  <%=f.datetime_field :start_time %>
+ <% end %>

@@ -6,9 +6,9 @@ class AvailableMealsController < ApplicationController
 
     def create
         elim_empty(params).each do |rid|
-            @available_meal = AvailableMeal.create(user_id: params[:available_meal][:user_id], recipe_id: rid)
+            @available_meal = AvailableMeal.create(user_id: session[:user_id], recipe_id: rid)
         end
-        redirect_to tracked_meals_path
+        redirect_to user_tracked_meals_path
     end
 
     def elim_empty(params)

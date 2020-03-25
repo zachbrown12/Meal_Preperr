@@ -1,4 +1,4 @@
-<%= form_for @available_meal do |f| %>
+<%= form_for @available_meal, url: user_available_meals_path do |f| %>
 	<ul>
 		<% if @available_meal.errors.any? %>
 			<%= @available_meal.errors.full_messages.each do |msg| %>
@@ -7,8 +7,7 @@
 		<% end %>
 	</ul>
 
-    <p>User</p>
-    <%= f.collection_select :user_id, User.all, :id, :name %>
+	<p><%= f.label :user_id, session[:username] %>'s Available Meals </p><br>
 
 <p>Recipes Available</p>
 		<%= f.collection_check_boxes :recipe_id, Recipe.all, :id, :name %>

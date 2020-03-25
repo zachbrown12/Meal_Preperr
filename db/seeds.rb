@@ -40,9 +40,9 @@ rd10 = RecipeDetail.create(ingredient_id: i10.id, recipe_id: r6.id, servings: 2,
 rd11 = RecipeDetail.create(ingredient_id: i11.id, recipe_id: r6.id, servings: 2, serving_unit:"Tomatoes")
 
 
-u1 = User.create(name:"Zach", username: "zach.brown", password:12345)
-u2 = User.create(name:"Baker", username: "baker123", password:12345)
-u3 = User.create(name:"Joe", username: "Joe", password:12345)
+u1 = User.create(name:"Zach", username: "zach.brown", password_digest:12345)
+u2 = User.create(name:"Baker", username: "baker123", password_digest:12345)
+u3 = User.create(name:"Joe", username: "Joe", password_digest:12345)
 
 
 #am1 = AvailableMeal.create(user_id: u1.id, recipe_id: r1.id, user_rating: 3)

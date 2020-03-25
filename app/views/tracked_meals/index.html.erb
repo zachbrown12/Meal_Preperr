@@ -1,5 +1,12 @@
 <p>Tracked Meals</p>
-<p><%= link_to "Add Recipes to my Account", new_available_meal_path %> </p><br>
+
+<p><%= link_to "Add Recipes to my Account", new_user_available_meal_path %> </p>
+
+
+<%= form_tag new_user_tracked_meal_path, method: "post" do %>
+  Starting Date: <%=datetime_field_tag :start_time %><br><br>
+<%= submit_tag "Generate Meals" %><br><br>
+ <% end %>
 
 
 <%= month_calendar events: @tracked_meals do |date, tracked_meals| %>
@@ -11,4 +18,3 @@
       </div>
     <% end %>
   <% end %>
-

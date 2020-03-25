@@ -1,0 +1,30 @@
+<% if flash[:message] %>
+  <%=  flash[:message].each do |message| %>
+  <div class="text-center">
+    <%= message %>
+  </div>
+  <% end %>
+<% end  %>
+
+    <%= form_for @user, url: users_path do |f| %>
+
+  <div class="form-group">
+    <%= label_tag :name, "Name:" %><br>
+    <%= f.text_field :name%>
+  </div>
+  <div class="form-group">
+    <%= label_tag :username, "Username:" %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :password, "Password:" %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="form-group">
+    <label>Password Confirmation:</label><br>
+    <%= f.text_field :password_confirmation%>
+  </div>
+    <%= f.submit "Create Account"%>
+
+  <% end %>
+
