@@ -3,7 +3,6 @@ class TrackedMealsController < ApplicationController
 
 def index
     @tracked_meals = TrackedMeal.all
-    @tracked_meal = TrackedMeal.new
 end
 
 def new
@@ -12,7 +11,10 @@ def new
 end
 
 def create 
-    @tracked_meal.create(form_params)
+    7.times do
+        @tracked_meal = TrackedMeal.create(available_meal_id: AvailableMeal.all.sample.id, start_time: params[:tracked_meal][:start_time])
+    end
+    redirect_to user_tracked_meals_path(session[:user_id])
 end
 
 def show

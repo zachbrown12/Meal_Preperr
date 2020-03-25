@@ -2,10 +2,9 @@
 
 <p><%= link_to "Add Recipes to my Account", new_user_available_meal_path %> </p>
 
-
-<%= form_for @tracked_meal do |f| %>
-  Starting Date: <%=f.datetime_field :start_time %><br><br>
-<%= f.submit "Generate Meals" %><br><br>
+<%= form_tag user_tracked_meals_path, method: "POST" do %>
+  Starting Date: <%=datetime_field_tag :'tracked_meal[start_time]' %><br><br>
+<%= submit_tag "Generate Meals" %><br><br>
  <% end %>
 
 
