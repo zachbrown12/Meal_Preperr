@@ -1,0 +1,14 @@
+<p>Tracked Meals</p>
+<p><%= link_to "Add Recipes to my Account", new_available_meal_path %> </p><br>
+
+
+<%= month_calendar events: @tracked_meals do |date, tracked_meals| %>
+    <%= date %>
+  
+    <% tracked_meals.each do |tracked_meals| %>
+      <div>
+        <%= tracked_meals.available_meal.recipe.name %>
+      </div>
+    <% end %>
+  <% end %>
+

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_135833) do
   create_table "recipe_details", force: :cascade do |t|
     t.integer "ingredient_id"
     t.integer "recipe_id"
-    t.integer "servings"
+    t.float "servings"
     t.string "serving_unit"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_135833) do
 
   create_table "tracked_meals", force: :cascade do |t|
     t.integer "available_meal_id"
-    t.datetime "date"
+    t.datetime "start_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
