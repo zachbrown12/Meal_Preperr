@@ -3,17 +3,25 @@
 <p><%= link_to "Add Recipes to my Account", new_user_available_meal_path %> </p>
 
 <%= form_tag user_tracked_meals_path, method: "POST" do %>
-  Starting Date: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
+  Choose a date to generate meals for the week: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Generate Meals" %><br><br>
  <% end %>
 
  <%= form_tag user_tracked_meals_path, method: "GET" do %>
-  Date to choose: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
-<%= submit_tag "Update Start Date" %><br><br>
+  Choose a date to see calories and a grocery list: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
+<%= submit_tag "Update Stats Date" %><br><br>
 
  <% end %>
 
-Calories for the week: <%= TrackedMeal.calories(@date) %>
+Calories for the week of <%= @date %>: <%= TrackedMeal.calories(@date) %><br><br>
+
+Ingredients for the week of <%= @date %>:
+<ul> 
+<% TrackedMeal.buildgrocerylist(@date).each do |item| %>
+  <li> <%= item %> </li>
+<% end %>
+</ul>
+
 
 
 

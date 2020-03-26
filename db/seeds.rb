@@ -37,11 +37,11 @@ rd3 = RecipeDetail.create(ingredient_id: i3.id, recipe_id: r2.id, servings: 2, s
 rd4 = RecipeDetail.create(ingredient_id: i4.id, recipe_id: r2.id, servings: 0.25, serving_unit:"Cups")
 rd5 = RecipeDetail.create(ingredient_id: i5.id, recipe_id: r3.id, servings: 3, serving_unit:"Shells")
 rd6 = RecipeDetail.create(ingredient_id: i6.id, recipe_id: r3.id, servings: 0.5, serving_unit:"Cups")
-rd7 = RecipeDetail.create(ingredient_id: i7.id, recipe_id: r4.id, servings: 3, serving_unit:"Pancakes")
-rd8 = RecipeDetail.create(ingredient_id: i8.id, recipe_id: r5.id, servings: 0.5, serving_unit:"Slices")
+rd7 = RecipeDetail.create(ingredient_id: i7.id, recipe_id: r4.id, servings: 3, serving_unit:"")
+rd8 = RecipeDetail.create(ingredient_id: i8.id, recipe_id: r5.id, servings: 1, serving_unit:"Slices")
 rd9 = RecipeDetail.create(ingredient_id: i9.id, recipe_id: r5.id, servings: 5, serving_unit:"Slices")
 rd10 = RecipeDetail.create(ingredient_id: i10.id, recipe_id: r6.id, servings: 2, serving_unit:"Cups")
-rd11 = RecipeDetail.create(ingredient_id: i11.id, recipe_id: r6.id, servings: 2, serving_unit:"Tomatoes")
+rd11 = RecipeDetail.create(ingredient_id: i11.id, recipe_id: r6.id, servings: 2, serving_unit:"")
 
 
 u1 = User.create(name:"Zach", username: "zach.brown", password_digest:12345)
