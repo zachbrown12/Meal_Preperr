@@ -59,7 +59,20 @@ def edit
 end
 
 def update
+    @tracked_meal = TrackedMeal.find(params[:id])
+    if @tracked_meal.update(form_params)
+        user_tracked_meals_path(@current_user)
+        redirect_to user_tracked_meals_path(@current_user)
+    else
+        render :edit
+    end
 end
+
+def destroy
+    TrackedMeal.find(params[:id]).destroy
+    redirect_to user_tracked_meals_path(@current_user)
+end
+
 
 private
     def form_params

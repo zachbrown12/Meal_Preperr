@@ -1,0 +1,7 @@
+<%= form_for @tracked_meal, url: user_tracked_meal_path, method: :patch do |f| %>
+    <div class="form-group">
+<%= f.label :available_meal_id, "Meal:" %><br>
+<%= f.collection_select :available_meal_id, AvailableMeal.all.each {|meal| meal.recipe.name}, :id, :recipelist %>
+    </div>
+<%= f.submit "Update Meal" %>
+<% end  %>

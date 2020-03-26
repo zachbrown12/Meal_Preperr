@@ -30,15 +30,14 @@ Ingredients for the week of <%= @date %>:
 </ul>
 
 
-
-
 <%= month_calendar events: @tracked_meals do |date, tracked_meals| %>
     <%= date %>
   
-    <% tracked_meals.each do |tracked_meals| %>
+    <% tracked_meals.each do |tracked_meal| %>
       <div>
         <% begin %>
-        <%= tracked_meals.available_meal.recipe.name %>
+        <%= tracked_meal.available_meal.recipe.name %> <%= link_to "Edit", edit_user_tracked_meal_path(user_id: @current_user, id: tracked_meal.id) %>
+        <%= link_to "Delete", user_tracked_meal_path(user_id: @current_user, id: tracked_meal.id), method: :delete, data: { confirm: "Really?" } %>
         <% rescue %>
         <% end %>
       </div>
