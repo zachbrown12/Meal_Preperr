@@ -16,6 +16,7 @@ end
 
 def create 
     #breakfast
+    begin
     i = 0
     until i == 7 do
         chosen_meal = AvailableMeal.all.sample
@@ -42,6 +43,9 @@ def create
         i += 1 
         end
     end
+    rescue
+        flash[:message] = "Please Add available meals to your account."
+    end
 
     redirect_to user_tracked_meals_path(@current_user)
 end
@@ -50,8 +54,11 @@ def show
     @tracked_meals = TrackedMeal.all
 end
 
+def edit
+    @tracked_meal = TrackedMeal.find(params[:id])
+end
+
 def update
-    binding.pry
 end
 
 private
