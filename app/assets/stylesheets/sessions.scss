@@ -15,10 +15,15 @@
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid  gray;
+    border-bottom: 1px solid  white;
     color: white;
     font-size: 18px;
     margin-bottom: 18px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 
 }
 
