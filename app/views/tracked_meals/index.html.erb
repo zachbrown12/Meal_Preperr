@@ -1,26 +1,40 @@
-<p>Tracked Meals</p>
- <% if flash[:message] %>
-  <div class="text-center">
-    <%= flash[:message] %>
-  </div>
- <% end %>
 
-<p><%= link_to "Add Recipes to my Account", new_user_available_meal_path %> </p>
+<br>
+<br>
+<br>
+<br>
+
+<div class='zone2'>
+
+
+
 
 <%= form_tag user_tracked_meals_path, method: "POST" do %>
-  Choose a date to generate meals for the week: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
+ <p class='label1'> Choose a date to generate meals for the week:</p> <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Generate Meals" %><br><br>
  <p><% "Please add meals to your account first" %></p>
  <% end %>
 
+ </div>
+
+ <div class='zone3'>
+
+
+
+
  <%= form_tag user_tracked_meals_path, method: "GET" do %>
-  Choose a date to see calories and a grocery list: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
+  <p class='label1'>Choose a date to see calories and a grocery list:<p> <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Update Stats Date" %><br><br>
 <% end %>
 
+</div>
 
 
-Calories for the week of <%= @date %>: <%= TrackedMeal.calories(@date) %><br><br>
+<div class='zone4'>
+
+
+<p class='label'> Calories for the week of <%= @date %>: <%= TrackedMeal.calories(@date) %></p>
+
 
 Ingredients for the week of <%= @date %>:
 <ul> 
@@ -28,6 +42,11 @@ Ingredients for the week of <%= @date %>:
   <li> <%= item %> </li>
 <% end %>
 </ul>
+</div>
+
+<div class='zone5'>
+
+
 
 
 <%= month_calendar events: @tracked_meals do |date, tracked_meals| %>
@@ -43,3 +62,5 @@ Ingredients for the week of <%= @date %>:
       </div>
     <% end %>
   <% end %>
+
+  </div>

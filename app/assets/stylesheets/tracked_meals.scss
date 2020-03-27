@@ -79,3 +79,141 @@
   
     .has-events {}
   }
+
+
+
+
+
+
+
+
+ 
+
+
+  .zone2{
+    background-color: green;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: .7;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+
+  .zone2 input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid  white;
+    color: white;
+    font-size: 28px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  
+  }
+  .zone2 input[type=submit]{
+    background: red;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 15px;
+
+
+}
+.zone2 input[type=submit]:hover{
+  background-color: green;
+  cursor: pointer;
+}
+
+
+
+
+  .zone3{
+    background-color: blue;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: .7;
+    border-radius: 15px;
+    margin-bottom: 30px;
+
+  }
+  .zone3 input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid  white;
+    color: white;
+    font-size: 28px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+  
+  }
+  p.label1{
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+
+
+  }
+  .zone3 input[type=submit]{
+    background: red;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 15px;
+
+
+}
+.zone3 input[type=submit]:hover{
+  background-color: green;
+  cursor: pointer;
+}
+
+  .zone4{
+    background-color: yellowgreen;
+    text-align: center;
+    margin-left: 450px;
+    margin-right: 450px;
+    opacity: .7;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    list-style: none;
+
+  }
+  p.label{
+    size: 38px;
+    color: green;
+    font-weight: bold;
+    font-family: monospace;
+  }
+  .zone5{
+    background-color: white;
+
+  }
+  .zone4 ul li{
+    size: 38px;
+    color: red;
+    font-weight: bold;
+    background-color: gray;
+    list-style: none;
+    margin-left: 90px;
+    margin-right: 100px;
+    border-radius: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    
+
+
+
+  }
