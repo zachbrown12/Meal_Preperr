@@ -44,7 +44,7 @@ def create
         end
     end
     rescue
-        flash[:message] = "Please Add available meals to your account."
+        flash[:message] = "Please add meals to your account first."
     end
 
     redirect_to user_tracked_meals_path(@current_user)
@@ -71,6 +71,14 @@ end
 def destroy
     TrackedMeal.find(params[:id]).destroy
     redirect_to user_tracked_meals_path(@current_user)
+end
+
+def grocerylist
+    begin 
+        @date = params[:tracked_meal][:start_time].to_date
+    rescue
+        @date = Date.today
+    end
 end
 
 

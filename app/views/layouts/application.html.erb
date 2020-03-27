@@ -25,6 +25,7 @@
         
         <li><%= link_to 'My Profile', user_path(@current_user) %></li>
         <li><%= link_to 'My Calendar', user_tracked_meals_path(@current_user.id) %></li>
+        <li><%= link_to "Add Meals to Account", new_user_available_meal_path(@current_user) %> </li>
 
         <li><%= link_to 'Log Out', destroy_session_path, method: :delete  %></li>
 

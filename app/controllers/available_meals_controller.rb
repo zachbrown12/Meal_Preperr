@@ -11,6 +11,10 @@ class AvailableMealsController < ApplicationController
         redirect_to user_tracked_meals_path
     end
 
+    def show
+        @available_meal = AvailableMeal.find(params[:id])
+    end
+
     def elim_empty(params)
         params[:available_meal][:recipe_id].reject { |r| r.empty? }
     end

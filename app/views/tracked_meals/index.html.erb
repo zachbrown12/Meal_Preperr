@@ -5,38 +5,35 @@
   </div>
  <% end %>
 
-<p><%= link_to "Add Recipes to my Account", new_user_available_meal_path %> </p>
-
+ <br>
 <%= form_tag user_tracked_meals_path, method: "POST" do %>
   Choose a date to generate meals for the week: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Generate Meals" %><br><br>
- <p><% "Please add meals to your account first" %></p>
  <% end %>
 
  <%= form_tag user_tracked_meals_path, method: "GET" do %>
-  Choose a date to see calories and a grocery list: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
+  Choose a date to see calories: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Update Stats Date" %><br><br>
+<% end %>
+
+<%= form_tag grocerylist_path, method: "GET" do %>
+  Choose a date to generate a grocery list: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
+<%= submit_tag "Generate Grocery List" %><br><br>
 <% end %>
 
 
 
 Calories for the week of <%= @date %>: <%= TrackedMeal.calories(@date) %><br><br>
 
-Ingredients for the week of <%= @date %>:
-<ul> 
-<% TrackedMeal.buildgrocerylist(@date).each do |item| %>
-  <li> <%= item %> </li>
-<% end %>
-</ul>
-
 
 <%= month_calendar events: @tracked_meals do |date, tracked_meals| %>
-    <%= date %>
-  
+
+  <%= date %>
+
     <% tracked_meals.each do |tracked_meal| %>
       <div>
         <% begin %>
-        <%= tracked_meal.available_meal.recipe.name %> <%= link_to "Edit", edit_user_tracked_meal_path(user_id: @current_user, id: tracked_meal.id) %>
+        <%= link_to tracked_meal.available_meal.recipe.name, recipe_path(tracked_meal.available_meal.recipe) %> <%= link_to "Edit", edit_user_tracked_meal_path(user_id: @current_user, id: tracked_meal.id) %>
         <%= link_to "Delete", user_tracked_meal_path(user_id: @current_user, id: tracked_meal.id), method: :delete, data: { confirm: "Really?" } %>
         <% rescue %>
         <% end %>

@@ -7,10 +7,13 @@
 		<% end %>
 	</ul>
 
-	<p><%= f.label :user_id, session[:username] %>'s Available Meals </p><br>
-
 <p>Recipes Available</p>
-		<%= f.collection_check_boxes :recipe_id, Recipe.all, :id, :name %>
+		<%= f.collection_check_boxes :recipe_id, Recipe.all, :id, :name do |b| %> 
+			<%= b.label(class: "check_box") do %>
+			  <%= b.check_box(class: "check_box") %>
+			  <%= b.object.name %></br>
+			<% end %>
+		  <% end %> 
 <br> 
 <br>
 	<%= f.submit "Save my Meals" %>
