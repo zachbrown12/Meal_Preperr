@@ -1,19 +1,22 @@
-<h2>Create a new User</h2>
+<h2 class='header'>Create A New Account</h2>
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
     <p><%= error %></p>
   <% end %>
 <% end %>
 
-<%= form_for @user do |f| %>
+<%= form_for @user,:html => {:class => 'x'} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <br>
   
   <%= f.label :username %>
   <%= f.text_field :username %>
+  <br>
   
   <%= f.label :password %>
   <%= f.password_field :password %>
+  <br>
 
   <%= f.submit %>
 <% end %>

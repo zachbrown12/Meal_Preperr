@@ -1,14 +1,27 @@
-<h2>Log in </h2>
 
 
-<%= form_for :session, url: login_path do |f| %>
 
-  
+<div class="contact-form">
+<h1 class='header'>Log in </h1>
+<%= form_for :session, url: login_path,:html => {:class => 'x'} do |f| %>
+
   <%= f.label :username %>
   <%= f.text_field :username %>
-  
+  <br>
   <%= f.label :password %>
   <%= f.password_field :password %>
-
+  <br>
   <%= f.submit "Login"%>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
 <% end %>
