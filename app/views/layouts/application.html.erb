@@ -28,7 +28,7 @@
         
         <li><%= link_to 'My Calendar', user_tracked_meals_path(@current_user.id) %>
             <ul>
-            <li><%= link_to 'Add Meals', new_user_available_meal_path(@current_user.id) %></li>
+            <li><%= link_to "Add Meals to Account", new_user_available_meal_path(@current_user) %></li>
             <li><%= link_to 'My Calendar', user_tracked_meals_path(@current_user.id) %></li>
 
             </ul>

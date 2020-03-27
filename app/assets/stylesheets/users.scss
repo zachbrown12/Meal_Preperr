@@ -38,30 +38,40 @@
   }
 
   .intro{
-    font-size: 30px;
-    font-family: 'Trebuchet MS' ;
-    font-weight: bold;
-    margin-left: 75px;
+    text-align: center;
+    font-size: 50px;
     color: green;
-    background: white;
-    opacity: .7;
-    margin-left: 20px;
-    margin-right: 20px;
+    list-style: none;
+    font-family: fantasy;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
  
  
  }
  #user-title{
-   color: green;
-   font-size: 45px;
-   text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  list-style: none;
+  font-family: fantasy;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
  }
  .user-list {
+  text-align: center;
+  font-size: 40px;
   color: red;
-  font-size: 25px;
+  list-style: none;
+  font-family: fantasy;
+  font-weight: bold;
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
