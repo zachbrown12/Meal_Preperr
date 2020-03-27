@@ -1,3 +1,8 @@
+<br>
+<br>
+<br>
+<br>
+<div class = 'space'>
 <%= form_for @available_meal, url: user_available_meals_path do |f| %>
 	<ul>
 		<% if @available_meal.errors.any? %>
@@ -18,4 +23,5 @@
 <br>
 	<%= f.submit "Save my Meals" %>
 <% end %>
+</div>
 
