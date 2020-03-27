@@ -6,12 +6,6 @@
 
 <div class='zone2'>
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 4ddc43dabd9af0c4335a340b66a7481d88f8e28f
 <%= form_tag user_tracked_meals_path, method: "POST" do %>
  <p class='label1'> Choose a date to generate meals for the week:</p> <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Generate Meals" %><br><br>
@@ -25,20 +19,6 @@
  <div class='zone3'>
 
  <%= form_tag user_tracked_meals_path, method: "GET" do %>
-<<<<<<< HEAD
-  Choose a date to see calories: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
-<%= submit_tag "Update Stats Date" %><br><br>
-<% end %>
-
-<%= form_tag grocerylist_path, method: "GET" do %>
-  Choose a date to generate a grocery list: <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
-<%= submit_tag "Generate Grocery List" %><br><br>
-<% end %>
-
-
-
-Calories for the week of <%= @date %>: <%= TrackedMeal.calories(@date) %><br><br>
-=======
   <p class='label1'>Choose a date to see calories and a grocery list:<p> <%=date_field_tag :'tracked_meal[start_time]' %><br><br>
 <%= submit_tag "Update Stats Date" %><br><br>
 <% end %>
@@ -62,7 +42,6 @@ Ingredients for the week of <%= @date %>:
 
 
 
->>>>>>> 4ddc43dabd9af0c4335a340b66a7481d88f8e28f
 
 
 <div class='zone5'>
