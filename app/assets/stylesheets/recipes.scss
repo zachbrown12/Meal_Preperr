@@ -1,3 +1,33 @@
 // Place all the styles related to the Recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#title{
+    text-align: center;
+    font-family: fantasy;
+    color: white;
+    opacity: .6;
+    font-size: 60px;
+    border-bottom: 3px solid  white ;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    
+}
+.bodyy ul li{
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    list-style: none;
+    font-family: fantasy;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+
+}
