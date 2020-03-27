@@ -1,3 +1,39 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.x{
+    text-align: center;
+    color: white;
+    margin: 0px;
+    font: 40px;
+
+  }
+
+  .x input{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid  gray;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 18px;
+
+}
+
+.x input[type=submit]{
+    background: red;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 15px;
+
+
+}
+.x input[type=submit]:hover{
+    background-color: green;
+    cursor: pointer;
+  }
+
